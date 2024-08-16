@@ -17,7 +17,7 @@ if response.status_code == 200:
     public_link = response.json()['tunnels'][0]['public_url']
 
     with open("link.txt", "w+") as link_file:
-        link_file.write("public_link")
+        link_file.write(public_link)
     
 else:
     raise Exception(f"Failed to retrieve tunnels. Status code: {response.status_code}")
